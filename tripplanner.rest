@@ -1,0 +1,9 @@
+POST http://localhost:8000/plan-trip/
+Content-Type: application/json
+
+{
+  "current_location": "Hawassa, Ethiopia",
+  "origin": "Nairobi, Kenya",
+  "destination": "Mekele, Ethiopia",
+  "current_cycle_hours": [0,0,0,0,0,0,0,0]
+}
