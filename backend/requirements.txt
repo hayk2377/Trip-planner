@@ -1,0 +1,5 @@
+Django==5.2.5
+djangorestframework==3.16.1
+django-cors-headers==4.7.0
+gunicorn==23.0.0
+geopy==2.4.1
