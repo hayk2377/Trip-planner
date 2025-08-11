@@ -121,7 +121,7 @@ function TripForm() {
 
    // Load form state from localStorage if available
   const [form, setForm] = useState(() => {
-    const saved = localStorage.getItem('tripForm');
+    const saved = sessionStorage.getItem('tripForm');
     return saved
       ? JSON.parse(saved)
       : {
@@ -132,7 +132,7 @@ function TripForm() {
     });
 
   useEffect(() => {
-    localStorage.setItem('tripForm', JSON.stringify(form));
+    sessionStorage.setItem('tripForm', JSON.stringify(form));
   }, [form]);
 
   const handleChange = (e) => {
@@ -158,7 +158,7 @@ const fetchTripData = async (redirectPath) => {
   }
   try {
     const response = await axios.post(
-      'http://localhost:8000/plan-trip/',
+      'https://trip-planner-pi60.onrender.com/plan-trip/',
       {
         current_location: form.current_location,
         origin: form.pickup_location,
